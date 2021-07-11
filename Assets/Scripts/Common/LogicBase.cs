@@ -1,19 +1,20 @@
-﻿namespace Assets.Code.Common
+﻿using Assets.Code.Common.DataAccess;
+using Assets.Code.IoC;
+using Assets.Code.MonoBehaviours.Configuration;
+
+namespace Assets.Code.Common
 {
-    using DataAccess;
-    using IoC;
-    using MonoBehaviours.Configuration;
 
     public class LogicBase
     {
         #region Properties
-        protected readonly IoC _container;
+        protected readonly IUnityContainer _container;
         protected readonly PrefabManager _prefabManager;
         protected readonly GlobalConfiguration _configuration;
         #endregion
-        
+
         #region Constructors
-        public LogicBase(IoC container, PrefabManager prefabManager, GlobalConfiguration config)
+        public LogicBase(IUnityContainer container, PrefabManager prefabManager, GlobalConfiguration config)
         {
             _container = container;
             _prefabManager = prefabManager;

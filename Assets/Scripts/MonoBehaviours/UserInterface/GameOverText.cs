@@ -15,7 +15,7 @@
         private float Size { get; set; }
         private RectTransform RectTransform { get; set; }
 
-        public override void Activate(IoC container)
+        public override void Activate(IUnityContainer container)
         {
             base.Activate(container);
             Activated = true;

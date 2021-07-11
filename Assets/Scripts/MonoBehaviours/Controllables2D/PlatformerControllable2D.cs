@@ -2,7 +2,7 @@
 {
     using UnityEngine;
     using IoC;
-    using DataAccess;
+    using Common.DataAccess;
     using GameLogic;
     using Common;
     using Utilities;
@@ -12,7 +12,7 @@
     {
         protected float Speed { get; set; }
 
-        public virtual void Activate(IoC container, Vector3? intialPosition = null)
+        public virtual void Activate(IUnityContainer container, Vector3? intialPosition = null)
         {
             base.Activate(container);
             Speed = Speed == 0f ? 1f : Speed;

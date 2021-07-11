@@ -11,7 +11,7 @@
     {
         private Text Text { get; set; }
 
-        public override void Activate(IoC container)
+        public override void Activate(IUnityContainer container)
         {
             base.Activate(container);
             Text = GetComponent<Text>();

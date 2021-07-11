@@ -8,7 +8,7 @@
     {
         private AudioSource AudioSource { get; set; }
 
-        public override void Activate(IoC container)
+        public override void Activate(IUnityContainer container)
         {
             base.Activate(container);
             AudioSource = GetComponent<AudioSource>();

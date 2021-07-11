@@ -1,18 +1,18 @@
 ﻿namespace Assets.Code.IoC
 {
-    using DataAccess;
+    using Common.DataAccess;
     using MonoBehaviours.Configuration;
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    public class IoC
+    public class UnityContainer : IUnityContainer
     {
         private ICollection<object> _container { get; set; }
         private PrefabManager PrefabManager { get; set; }
         private GlobalConfiguration Configuration { get; set; }
 
-        public IoC(GlobalConfiguration config)
+        public UnityContainer(GlobalConfiguration config)
         {
             // Initialize Container
             _container = new HashSet<object>();
@@ -37,7 +37,7 @@
             {
                 entity = (T)Activator.CreateInstance(typeof(T), new object[] { });
             }
-            else if (typeof(T).GetConstructor(new[] { typeof(IoC) }) != null)
+            else if (typeof(T).GetConstructor(new[] { typeof(UnityContainer) }) != null)
             {
                 entity = (T)Activator.CreateInstance(typeof(T), new object[] { this });
             }

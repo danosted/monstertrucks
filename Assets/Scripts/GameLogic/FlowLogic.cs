@@ -2,7 +2,7 @@
 {
     using MonoBehaviours.Configuration;
     using Common;
-    using DataAccess;
+    using Common.DataAccess;
     using IoC;
     using UnityEngine.SceneManagement;
 
@@ -11,7 +11,7 @@
 
         protected readonly UserInterfaceLogic _userInterfaceLogic;
 
-        public FlowLogic(IoC container, PrefabManager prefabManager, GlobalConfiguration config) : base(container, prefabManager, config)
+        public FlowLogic(UnityContainer container, PrefabManager prefabManager, GlobalConfiguration config) : base(container, prefabManager, config)
         {
             _userInterfaceLogic = _container.Resolve<UserInterfaceLogic>();
         }
@@ -33,14 +33,14 @@
             _userInterfaceLogic.HideCurrentCanvas();
 
             // Create an object
-            var obj = PrefabManager.GetPrefab(Configuration.prefab_moveable_object);
+            var obj = _prefabManager.GetPrefab(_configuration.prefab_moveable_object);
             obj.Activate(_container);
         }
 
         public void GameOver()
         {
             _container.Resolve<UserInterfaceLogic>().InitializeGameOverCanvas();
-            PrefabManager.Shutdown();
+            _prefabManager.Shutdown();
         }
 
         public void RestartGame()

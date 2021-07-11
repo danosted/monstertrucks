@@ -7,7 +7,7 @@
     [RequireComponent(typeof(Canvas))]
     public class CanvasManager : PrefabBase
     {
-        public override void Activate(IoC container)
+        public override void Activate(IUnityContainer container)
         {
             base.Activate(container);
 

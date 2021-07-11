@@ -3,13 +3,13 @@
     using UnityEngine;
     using IoC;
     using GameLogic;
-    using DataAccess;
+    using Common.DataAccess;
 
     public class Initializer : MonoBehaviour
     {
         [Header("Global Configuration Prefab"), Tooltip("Find under Assets/Prefabs/Configuration/")]
         public GlobalConfiguration GlobalConfiguration;
-        private IoC Container { get; set; }
+        private IUnityContainer Container { get; set; }
         private PrefabManager PrefabManager { get; set; }
 
         /// <summary>
@@ -18,7 +18,7 @@
         void Awake()
         {
             // Initialize "IoC" container with the configuration to distribute
-            Container = new IoC(GlobalConfiguration);
+            Container = new UnityContainer(GlobalConfiguration);
             PrefabManager = Container.Resolve<PrefabManager>();
 
             // Initialize game...

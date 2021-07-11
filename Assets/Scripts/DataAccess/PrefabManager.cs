@@ -1,20 +1,21 @@
-﻿namespace Assets.Code.DataAccess
+﻿using Assets.Code.IoC;
+using Assets.Code.MonoBehaviours.Configuration;
+using Assets.Code.MonoBehaviours.UserInterface;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace Assets.Code.Common.DataAccess
 {
-    using IoC;
-    using MonoBehaviours.Configuration;
-    using MonoBehaviours.UserInterface;
-    using System.Collections.Generic;
-    using System.Linq;
-    using UnityEngine;
 
     public class PrefabManager
     {
         private object semaLock = new object();
-        private IoC _container;
+        private IUnityContainer _container;
         private ICollection<Object> _activePrefabs;
         private ICollection<Object> _inactivePrefabs;
 
-        public PrefabManager(IoC ioc)
+        public PrefabManager(IUnityContainer ioc)
         {
             _container = ioc;
             _activePrefabs = new List<Object>();
@@ -86,7 +87,7 @@
         {
             lock (semaLock)
             {
-                var except = new [] { typeof(GlobalConfiguration), typeof(CanvasManager) };
+                var except = new[] { typeof(GlobalConfiguration), typeof(CanvasManager) };
                 var tempList = _activePrefabs.Where(ap => !except.Contains(ap.GetType())).ToList();
                 foreach (var p in tempList)
                 {
