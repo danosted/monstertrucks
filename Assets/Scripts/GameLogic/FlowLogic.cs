@@ -11,7 +11,7 @@
 
         protected readonly UserInterfaceLogic _userInterfaceLogic;
 
-        public FlowLogic(UnityContainer container, PrefabManager prefabManager, GlobalConfiguration config) : base(container, prefabManager, config)
+        public FlowLogic(IUnityContainer container, PrefabManager prefabManager, GlobalConfiguration config) : base(container, prefabManager, config)
         {
             _userInterfaceLogic = _container.Resolve<UserInterfaceLogic>();
         }
@@ -19,7 +19,7 @@
         public void InitializeGame()
         {
             // Initialize UI
-            _userInterfaceLogic.InitializeGameMenuCanvas();
+            // _userInterfaceLogic.InitializeGameMenuCanvas();
 
             // Initialize Audio
             _container.Resolve<AudioLogic>().InitializeAudio();
@@ -29,8 +29,8 @@
         public void StartGame()
         {
             // Change to game UI
-            // Container.Resolve<UserInterfaceLogic>().InitializeGameCanvas();
-            _userInterfaceLogic.HideCurrentCanvas();
+            // _container.Resolve<UserInterfaceLogic>().InitializeGameCanvas();
+            // _userInterfaceLogic.HideCurrentCanvas();
 
             // Create an object
             var obj = _prefabManager.GetPrefab(_configuration.prefab_moveable_object);

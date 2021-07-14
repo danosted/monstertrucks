@@ -9,19 +9,22 @@
     public class UnityContainer : IUnityContainer
     {
         private ICollection<object> _container { get; set; }
-        private PrefabManager PrefabManager { get; set; }
-        private GlobalConfiguration Configuration { get; set; }
+        private readonly PrefabManager PrefabManager;
+        private readonly GlobalConfiguration Configuration;
 
         public UnityContainer(GlobalConfiguration config)
         {
+            
             // Initialize Container
             _container = new HashSet<object>();
 
-            // Initialize PrefabManager
-            PrefabManager = Resolve<PrefabManager>();
-
             // Initialize GlobalConfiguration
-            Configuration = PrefabManager.GetPrefab(config);
+            Configuration = config;
+
+            // Initialize PrefabManager
+            PrefabManager =  new PrefabManager(this, config);
+
+            _container.Add(PrefabManager);
         }
 
         public T Resolve<T>()

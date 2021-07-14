@@ -15,10 +15,10 @@ namespace Assets.Code.Common.DataAccess
         private ICollection<Object> _activePrefabs;
         private ICollection<Object> _inactivePrefabs;
 
-        public PrefabManager(IUnityContainer ioc)
+        public PrefabManager(IUnityContainer ioc, GlobalConfiguration config)
         {
             _container = ioc;
-            _activePrefabs = new List<Object>();
+            _activePrefabs = new List<Object>() { config };
             _inactivePrefabs = new List<Object>();
         }
 
