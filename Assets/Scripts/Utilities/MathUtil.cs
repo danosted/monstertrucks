@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.Utilities
+﻿namespace UnityDM.Utilities
 {
     public class MathUtil
     {

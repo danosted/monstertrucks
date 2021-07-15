@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.Common
+﻿namespace UnityDM.Common
 {
     using DataAccess;
     using GameLogic;

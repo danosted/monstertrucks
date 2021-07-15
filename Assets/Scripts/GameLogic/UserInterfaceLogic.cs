@@ -1,10 +1,10 @@
-﻿using Assets.Code.MonoBehaviours.UserInterface;
-using Assets.Code.MonoBehaviours.Configuration;
-using Assets.Code.IoC;
-using Assets.Code.Common;
-using Assets.Code.Common.DataAccess;
+﻿using UnityDM.MonoBehaviours.UserInterface;
+using UnityDM.MonoBehaviours.Configuration;
+using UnityDM.IoC;
+using UnityDM.Common;
+using UnityDM.Common.DataAccess;
 
-namespace Assets.Code.GameLogic
+namespace UnityDM.GameLogic
 {
     public class UserInterfaceLogic : LogicBase
     {

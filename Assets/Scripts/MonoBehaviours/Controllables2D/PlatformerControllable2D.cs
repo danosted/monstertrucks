@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.Controllables2D
+﻿namespace UnityDM.MonoBehaviours.Controllables2D
 {
     using UnityEngine;
     using IoC;
@@ -6,7 +6,7 @@
     using GameLogic;
     using Common;
     using Utilities;
-    using Assets.Code.Common.Constants;
+    using UnityDM.Common.Constants;
 
     public class PlatformerControllable2D : PrefabBase
     {

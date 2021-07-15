@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.Obstacles
+﻿namespace UnityDM.MonoBehaviours.Obstacles
 {
     using UnityEngine;
     using IoC;

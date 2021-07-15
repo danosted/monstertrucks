@@ -1,9 +1,9 @@
-﻿using Assets.Code.MonoBehaviours.Configuration;
-using Assets.Code.Common;
-using Assets.Code.Common.DataAccess;
-using Assets.Code.IoC;
+﻿using UnityDM.MonoBehaviours.Configuration;
+using UnityDM.Common;
+using UnityDM.Common.DataAccess;
+using UnityDM.IoC;
 
-namespace Assets.Code.GameLogic
+namespace UnityDM.GameLogic
 {
     public class AudioLogic : LogicBase
     {

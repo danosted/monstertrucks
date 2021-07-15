@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.UserInterface
+﻿namespace UnityDM.MonoBehaviours.UserInterface
 {
     using IoC;
     using Common;

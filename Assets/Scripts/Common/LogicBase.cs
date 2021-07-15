@@ -1,8 +1,8 @@
-﻿using Assets.Code.Common.DataAccess;
-using Assets.Code.IoC;
-using Assets.Code.MonoBehaviours.Configuration;
+﻿using UnityDM.Common.DataAccess;
+using UnityDM.IoC;
+using UnityDM.MonoBehaviours.Configuration;
 
-namespace Assets.Code.Common
+namespace UnityDM.Common
 {
 
     public class LogicBase

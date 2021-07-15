@@ -1,8 +1,8 @@
-﻿namespace Assets.Code.Utilities
+﻿namespace UnityDM.Utilities
 {
     using System;
     using System.Collections.Generic;
-    using Assets.Code.MonoBehaviours.Obstacles;
+    using UnityDM.MonoBehaviours.Obstacles;
     using UnityEngine;
 
     public class ScreenUtil

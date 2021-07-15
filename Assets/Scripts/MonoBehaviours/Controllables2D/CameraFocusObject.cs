@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.Controllables2D
+﻿namespace UnityDM.MonoBehaviours.Controllables2D
 {
     using UnityEngine;
     using IoC;

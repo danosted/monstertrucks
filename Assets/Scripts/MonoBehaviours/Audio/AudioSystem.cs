@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.Audio
+﻿namespace UnityDM.MonoBehaviours.Audio
 {
     using Common;
     using IoC;

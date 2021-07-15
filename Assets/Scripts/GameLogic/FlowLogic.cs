@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.GameLogic
+﻿namespace UnityDM.GameLogic
 {
     using MonoBehaviours.Configuration;
     using Common;

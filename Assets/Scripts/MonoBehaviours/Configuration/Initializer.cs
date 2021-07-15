@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.MonoBehaviours.Configuration
+﻿namespace UnityDM.MonoBehaviours.Configuration
 {
     using UnityEngine;
     using IoC;

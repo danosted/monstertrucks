@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.IoC
+﻿namespace UnityDM.IoC
 {
     public interface IUnityContainer
     {

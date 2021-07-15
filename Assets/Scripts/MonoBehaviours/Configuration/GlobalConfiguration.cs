@@ -1,10 +1,10 @@
-﻿namespace Assets.Code.MonoBehaviours.Configuration
+﻿namespace UnityDM.MonoBehaviours.Configuration
 {
     using Obstacles;
     using UnityEngine;
     using UserInterface;
     using Audio;
-    using Assets.Code.MonoBehaviours.Controllables2D;
+    using UnityDM.MonoBehaviours.Controllables2D;
 
     public class GlobalConfiguration : MonoBehaviour
     {
